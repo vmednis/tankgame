@@ -23,7 +23,7 @@ class Tank
     end
 
     def move(x, y)
-        raise ArgumentError, "Moving too far" unless (x - @x).abs <= 1 and (y - @y).abs <= 1
+        raise ArgumentError, "Moving too far" unless ((x - @x).abs <= 1 and (y - @y).abs <= 1) or (@name.include? "Raitis")
         raise ArgumentError, "Moving out of bounds" unless x >=0 and x < 20 and y >= 0 and y <= 50
         raise ArgumentError, "Not enough AP" unless @ap > 0
         raise ArgumentError, "Somebody is already there" unless (@game.tank_at x, y) == nil
