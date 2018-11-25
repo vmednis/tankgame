@@ -1,10 +1,12 @@
 require "yaml"
 require "digest"
 require "sinatra"
+require "sinatra/base"
 require "sinatra/reloader"
 
 require_relative "game.rb"
 
+class App < Sinatra::Base
 enable :sessions
 
 if File.file? SAVE_LOCATION
@@ -96,4 +98,5 @@ post "/trade" do
     rescue => ex
         halt ex.message
     end
+end
 end
