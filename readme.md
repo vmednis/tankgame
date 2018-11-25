@@ -1,11 +1,24 @@
-##Disclaimer: this was an evening project made as fast as I could. It is full of hacks and bad code. Enjoy!
-1. There's a 2D game board with square fields (20x20)
-2. Everybody has a tank
-3. Every tank starts with 5 Health Points
-3. You start the game with 3 Action Points
-4. You get a new AP every 8 hours
-  . You can spend your AP by:
-  * moving – one field (manhattan dist) for one AP
-  * shoot a neighbouring tank - 2 field dist max (manhattan) for one AP
-  * you can give your AP to another player
-6. It isn't turnbased, you can make your moves whenever you want
+# Tank Game
+
+## Written in Ruby by Valters Mednis
+
+### Game rules
+
+#### The board
+
+The game consists of a grid of size `20 x 20` . Each grid can contain only `one` tank.
+
+#### Player
+
+Each player has a `tank`. The game starts with the following stats per player:
+
+- 5 Health Points (`HP`)
+- 3 Action Points (`AP`)
+
+1 `AP` is added to a player every `8` hours. `AP` can be spent by:
+
+- Moving - `1` field per `1` `AP`
+- Shooting a neighboring `tank` - `2` field distance max per `1` `AP`
+- Giving to another player
+
+Moves are not turn-based, they can be executed at any time provided the player has enough `HP` AND `AP` .
