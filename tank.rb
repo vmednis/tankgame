@@ -42,7 +42,7 @@ class Tank
 
         target.hp = target.hp - 1
         if target.hp <= 0
-            game.remove_player target
+            @game.remove_player target
         end
 
         @ap = @ap - 1
