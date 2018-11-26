@@ -19,6 +19,6 @@ Each player has a `tank`. The game starts with the following stats per player:
 
 - Moving - `1` field per `1` `AP`
 - Shooting a neighboring `tank` - `2` field distance max per `1` `AP`
-- Giving to another player
+- Giving to another player within the attack distance
 
 Moves are not turn-based, they can be executed at any time provided the player has enough `HP` AND `AP` .
