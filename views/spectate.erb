@@ -1,0 +1,18 @@
+<table style="border: 1px solid black; border-collapse: collapse; table-layour: fixed; width: 2000;">
+    <% 20.times do |i|%>
+    <tr style="border: 1px solid black; border-collapse: collapse; height: 100px;">
+        <% 20.times do |j| %>
+        <td style="border: 1px solid black; border-collapse: collapse; width: 100px;">
+            <% tank = game.tank_at(j, i)%>
+            <% unless tank %>
+                <i style="color: #aaa"><%= "(#{j};#{i})" %></i>
+            <% else %>
+                <%= "#{tank.name}" %></br>
+                <%= "#{tank.hp}hp" %></br>
+                <%= "#{tank.ap}ap" %></br>
+            <% end %>
+        </td>
+        <% end %>
+    </tr>
+    <% end %>
+</table>
