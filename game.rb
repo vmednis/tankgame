@@ -32,7 +32,7 @@ class Game
     end
 
     def remove_player(tank)
-        @tanks -= tank
+        @tanks.delete tank
     end
 
     def tank_at(x, y)
