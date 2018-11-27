@@ -32,6 +32,7 @@ class Game
     end
 
     def remove_player(tank)
+	tank.hp = 0
         @tanks.delete tank
     end
 
