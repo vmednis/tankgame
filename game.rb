@@ -13,11 +13,11 @@ class Game
     end
 
     def update_ap
-        if DateTime.now > @last_ap_update + (8.0/24.0) 
+        while DateTime.now > @last_ap_update + (8.0/24.0) 
             @tanks.each do |t|
                 t.ap += 1
             end
-            @last_ap_update = DateTime.now
+            @last_ap_update = @last_ap_update + (8.0/24.0)
         end
     end
 
